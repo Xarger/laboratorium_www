@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title of the document</title>
+
+		<style type="text/css">
+		div {
+			float: left;
+		}
+
+		#box {
+		    width: 405px;
+		    height: 100px;
+		    border: 2px solid gray;
+		    padding: 5px;
+		    margin: 15px;
+
+		}
+
+		</style>
+
+		<script type="text/javascript">
+
+			function ustawkolor() {
+				var wartosckoloru, x;
+				wartosckoloru = Number(document.getElementById('color').value);
+				x=((wartosckoloru*255)/100).toFixed(0);
+				document.getElementById('box').style.backgroundColor='rgb(' + x + ',' + x + ',' + x + ')'; 
+			}
+		</script>
+
+	</head>
+
+	<body>
+		<h2>Zadanie 8</h2>
+
+		<div id="box" >
+			
+		</div>
+
+		<div>
+			</br>
+			<div>Wprowadź wartość koloru od 0 do 100 &nbsp&nbsp&nbsp&nbsp</div>
+			<div><input id="color"></input></div>
+			</br></br>
+			<input type="button" value="Ustaw kolor" onclick="ustawkolor()"></input>
+			<div id="wynik"></div>
+
+			<br />
+	   		<br />
+
+
+	</body>
+
+</html>

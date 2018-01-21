@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">  
+  </head>
+  
+  <body>
+	<h2>Zadanie 6</h2>
+	<h3>odpowiedz na pytanie jeśli się wyświetli w dniu zajęć z WWW</h3>
+	<table>
+		<tr>
+			<th><p id="answer"></p></th>
+		</tr>		
+	</table>  	
+
+	
+
+	<script>
+	document.getElementById("actualday").innerHTML = DzienTygodnia();
+
+	function DzienTygodnia() {
+				var txt;
+				switch (new Date().getDay()) {
+
+					case 2 || 0 || 6:
+						    if (confirm("Dziś są zajęcia z WWW. Jeśli jesteś zadowolony wciśnij OK :)") == true) {
+						        txt = "Oczywiście że tak, a jakże mogłoby być inaczej!";
+						    } else {
+						        txt = "Zapewne błędny klik :)";
+						    }
+						    document.getElementById("answer").innerHTML = txt;
+						break;
+					default:
+						alert("Dzis nie ma zajęć z WWW");
+				}
+			}
+
+	</script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    
+    <style>
+		table, th, td {
+    	border: 1px solid black;
+    	border-collapse: collapse;
+	}
+	th {
+    	padding: 5px;
+    	text-align: left;    
+	}
+	</style>
+
+  </head>
+  
+  <body>
+	<h2>Zadanie 5</h2>
+	<table>
+		<tr>
+			<th><p id="years"></p></th>
+			<th><p id="month"></p></th>
+			<th><p id="dayn"></p></th>
+		</tr>		
+	</table>  	
+
+	<script>
+	var d = new Date();
+	document.getElementById("years").innerHTML = d.getFullYear();
+	document.getElementById("month").innerHTML = (d.getMonth()+1);
+	document.getElementById("dayn").innerHTML = d.getDate();
+	
+	</script>
+
+  </body>
+
+</html>

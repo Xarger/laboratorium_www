@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Title of the document</title>
+
+		<style>
+			div.form {
+			    width: 300px;
+			    padding: 10px;
+			    border: 2px solid gray;
+			    margin: 0;
+			}
+
+			h4 {
+				position: relative;
+			}
+
+			div {
+				float: left;
+			}
+
+		</style>
+
+
+		<script type="text/javascript">
+
+			function Przelicz() {
+				var dl=Number(document.getElementById('dlugosc').value);
+				var jedn;
+
+				if(isNaN(dl)){ alert('to nie jest liczba'); } else { 
+
+					if(document.getElementById('nametry').checked) {
+						switch(document.getElementById('jednostka').value) {
+							case 'ea7852': jedn=dl*0.9144; break;
+							case '61bde8': jedn=dl*14.63; break;
+							case '72ea8a': jedn=dl*0.3; break;
+						}
+					} else if (document.getElementById('zmetrow').checked) {
+						switch(document.getElementById('jednostka').value) {
+							case 'ea7852': jedn=dl/0.9144; break;
+							case '61bde8': jedn=dl/14.63; break;
+							case '72ea8a': jedn=dl/0.3; break;
+						}
+					}
+					document.getElementById('wynik').innerHTML=jedn.toFixed(3);
+					document.getElementById('formularz').reset();
+				}
+			}
+
+		</script>
+
+
+	</head>
+
+	<body>
+		<h2>Zadanie 7</h2>
+			<div class="form">
+				</br>
+				<form id="formularz">
+					Długość&nbsp&nbsp <input id="dlugosc" type="text" value="0"></input></br>
+					</br>
+					<input type="radio" name="gender" id="nametry" checked> Przelicz na metry &nbsp&nbsp
+					<input type="radio" name="gender" id="zmetrow" > Przelicz z metrów </br></br>
+					Jednostka &nbsp
+					  <select id="jednostka" onChange="if(this.selectedIndex!=-1)
+						document.bgColor=this.options[this.selectedIndex].value">
+					    <option value="ea7852">jard</option>
+					    <option value="61bde8">węzeł</option>
+					    <option value="72ea8a">stopa</option>
+					  </select>
+					</br></br>
+						<input type="button" value="Oblicz" onclick="Przelicz();">
+					</br></br>
+					<div>Wynik&nbsp&nbsp</div> 
+					<div id="wynik" style="width:100px; background-color:#ccffff;" >0</div>
+				</form>
+			</div>
+
+	</body>
+
+</html>

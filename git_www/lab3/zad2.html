@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h2>Zadanie 2</h2>
+		<h3>podaj liczbę całkowitą</h3>
+		<input id="number">
+		<button type="button" onclick="myFunction()">Submit</button>
+		<h3 id="wynik"></h3>
+
+		<script>
+			function myFunction() {
+				var x, text;
+				x = document.getElementById("number").value;
+				if (x % 2 == 0) {
+					text = "liczba jest parzysta";
+				} else {
+					text = "liczba jest nieparzysta";
+				}
+				document.getElementById("wynik").innerHTML = text;
+			}
+		</script>
+	</body>
+
+</html>

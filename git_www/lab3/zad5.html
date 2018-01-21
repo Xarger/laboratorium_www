@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    
+    <style>
+		table, th, td {
+    	border: 1px solid black;
+    	border-collapse: collapse;
+	}
+	th {
+    	padding: 5px;
+    	text-align: left;    
+	}
+	</style>
+
+  </head>
+  
+  <body>
+	<h2>Zadanie 5</h2>
+	<table>
+		<tr>
+			<th><p id="years"></p></th>
+			<th><p id="month"></p></th>
+			<th><p id="dayn"></p></th>
+			<th><p id="actualday"></p></th>
+		</tr>		
+	</table>  	
+
+	
+
+	<script>
+	var d = new Date();
+	document.getElementById("years").innerHTML = d.getFullYear();
+	document.getElementById("month").innerHTML = (d.getMonth()+1);
+	document.getElementById("dayn").innerHTML = d.getDate();
+	document.getElementById("actualday").innerHTML = DzienTygodnia();
+
+	function DzienTygodnia() {
+				var day;
+	    		
+				switch (new Date().getDay()) {
+					case 0:
+						day = "Niedziela";
+						break;
+					case 1:
+						day = "Poniedzialek";
+						break;
+					case 2:
+						day = "Wtorek";
+						break;
+					case 3:
+						day = "Sroda";
+						break;
+					case 4:
+						day = "Czwartek";
+						break;
+					case 5:
+						day = "Piatek";
+						break;
+					case 6:
+						day = "Sobota";
+				}
+				return day
+			}
+
+	</script>
+
+
+  </body>
+
+</html>

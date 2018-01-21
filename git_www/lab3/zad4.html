@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<h2>Zadanie 4</h2>
+		<h3>podaj numer z przedziału od 0 do 6</h3>
+		<input id="numertygodnia">
+		<button type="button" onclick="DzienTygodnia()">OK</button>
+
+		<script>
+			function DzienTygodnia() {
+				var x, day;
+				x = document.getElementById("numertygodnia").value;
+	    		
+				switch (x) {
+					case "0":
+						day = "Niedziela";
+						break;
+					case "1":
+						day = "Poniedzialek";
+						break;
+					case "2":
+						day = "Wtorek";
+						break;
+					case "3":
+						day = "Sroda";
+						break;
+					case "4":
+						day = "Czwartek";
+						break;
+					case "5":
+						day = "Piatek";
+						break;
+					case "6":
+						day = "Sobota";
+				}
+				alert("Witaj dziś jest " + day);
+			}
+			
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <title>Title of the document</title>
+
+    <script language="javascript" type="text/javascript" src="forms2.js">
+     
+    </script>
+
+
+  </head>
+
+  <body>
+    </br><h5>&nbsp&nbspĆwiczenie 2 ad 2</h5></br>
+
+    <div class="bd-example">
+    
+      
+        <form>
+          
+          <div class="col-md-4 mb-3">
+            <p id=”errorName” class="d-none">Podanie imienia jest wymagane!</p>
+            <label>Imię i Nazwisko (wymagane)</label>
+            <input type="text" class="form-control" id="contactName" placeholder="(wymagane)" value="" required>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label>Adres email (wymagane)</label>
+            <input type="text" class="form-control" id="contactEmail" placeholder="(wymagane)" value="" required>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label>Informacja (wymagane, ograniczenie do 250 znaków)</label>
+            <input type="text" class="form-control" placeholder="(wymagane)" value="" required>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <input type="submit" value="Wyślij" onclick="checkForm()">
+          </div>
+        </form>
+    
+    </div>
+
+  </body>
+</html>
